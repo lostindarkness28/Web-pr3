@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1712674400001",
+    "name": "ВЕС Західна-1",
+    "type": "horizontal",
+    "coords": "50.4501, 30.5234",
+    "power": 2.5,
+    "count": 10,
+    "totalPower": 25,
+    "height": 120,
+    "diameter": 110
+  },
+  {
+    "id": "1712674400002",
+    "name": "Турбіна Б-22",
+    "type": "vertical",
+    "coords": "46.4825, 30.7233",
+    "power": 3.35,
+    "count": 3,
+    "totalPower": 10.1,
+    "height": 45,
+    "diameter": 25
+  },
+  {
+    "id": "1775745483221",
+    "name": "Київська ВЕС",
+    "type": "horizontal",
+    "coords": "45.1234,32.5678",
+    "power": 8,
+    "count": 0,
+    "height": 150,
+    "diameter": 160,
+    "totalPower": 0,
+    "registrationDate": "2026-04-09T14:38:03.221Z"
+  }
+]

@@ -1,0 +1,183 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --glass: rgba(255, 255, 255, 0.95);
+    --primary: #0f172a;
+    --accent: #3b82f6;
+    --danger: #be123c;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    background: var(--glass);
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 40px;
+}
+
+.form-section {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group { 
+    flex: 1; 
+    min-width: 0; 
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    font-size: 0.9rem;
+}
+
+label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:hover { 
+    background: #2563eb; 
+    transform: translateY(-2px); 
+}
+
+.consumers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.consumer-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.85rem;
+}
+
+.info-row span { 
+    color: #64748b; 
+}
+
+.info-row.total {
+    background: #eff6ff;
+    margin: 10px -20px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-map { 
+    color: var(--accent); 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+}
+
+.btn-delete { 
+    background: #fff1f2; 
+    color: var(--danger); 
+    border: none; 
+    padding: 6px 12px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+}
+
+/* Оптимізація для мобільних пристроїв */
+@media (max-width: 1000px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-wrapper {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .consumers-list {
+        grid-template-columns: 1fr;
+    }
+
+    input, select, .btn-primary {
+        font-size: 16px; 
+        padding: 14px;
+    }
+
+    .consumer-card {
+        padding: 15px;
+    }
+}
